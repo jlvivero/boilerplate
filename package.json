@@ -1,0 +1,21 @@
+{
+  "name": "boilerplate",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specificed\" && exit 1"
+  },
+  "author": "jose luis vivero",
+  "license": "",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "fb": "1.0.2",
+    "jwt-simple": "^0.3.0",
+    "mongodb": "2.1.14",
+    "mongoose": "^4.1.4",
+    "promise": "^7.1.1",
+    "request": "^2.61.0"
+  }
+}

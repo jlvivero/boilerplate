@@ -37,5 +37,8 @@ app.get('*', function(req,res){
   res.send('404');
 });
 
+var apiFeed = function(){
+  facebook();
+}
 
 app.listen(process.env.PORT || 3000);
