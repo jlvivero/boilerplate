@@ -2,8 +2,10 @@ var fs = require('fs');
 var path = require('path');
 var express = require('express');
 var bodyParser = require('body-parser');
-var app = module.exports.app = exports.app = express();
+var request = require('request');
 var mongoose = require('mongoose');
+var facebook = require('./helpers/facebook');
+var app = module.exports.app = exports.app = express();
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/test", function (err) {
   if(err){
@@ -41,4 +43,11 @@ var apiFeed = function(){
   facebook();
 }
 
-app.listen(process.env.PORT || 3000);
+app.listen(3000, "0.0.0.0", function (err) {
+  if (err) {
+    console.log(err);
+    return;
+  }
+  console.log("listening to port:   " + 3000);
+  apiFeed();
+});
