@@ -4,7 +4,6 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
 var mongoose = require('mongoose');
-var facebook = require('./helpers/facebook');
 var app = module.exports.app = exports.app = express();
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/test", function (err) {
@@ -39,15 +38,10 @@ app.get('*', function(req,res){
   res.send('404');
 });
 
-var apiFeed = function(){
-  facebook();
-}
-
 app.listen(3000, "0.0.0.0", function (err) {
   if (err) {
     console.log(err);
     return;
   }
   console.log("listening to port:   " + 3000);
-  apiFeed();
 });
