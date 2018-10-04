@@ -11,7 +11,6 @@
   "dependencies": {
     "body-parser": "^1.13.3",
     "express": "^4.13.3",
-    "fb": "1.0.2",
     "jwt-simple": "^0.3.0",
     "mongodb": "2.1.14",
     "mongoose": "^4.1.4",
